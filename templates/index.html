@@ -1,0 +1,190 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Mushroom Classifier</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mushroom Classifier</h1>
+        <form id="mushroomForm">
+            <div>
+            <label for="capDiameter">Cap Diameter (cm):</label>
+            <input type="number" step="0.1" id="capDiameter" name="capDiameter" required>
+            </div>
+
+            <div>
+            <label for="capShape">Cap Shape:</label>
+            <select id="capShape" name="capShape" required>
+                <option value="0">Bell</option>
+                <option value="1">Conical</option>
+                <option value="6">Convex</option>
+                <option value="2">Flat</option>
+                <option value="5">Sunken</option>
+                <option value="4">Spherical</option>
+                <option value="3">Others</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="capSurface">Cap Surface:</label>
+            <select id="capSurface" name="capSurface" required>
+                <option value="4">Fibrous</option>
+                <option value="2">Grooves</option>
+                <option value="10">Scaly</option>
+                <option value="7">Smooth</option>
+                <option value="3">Shiny</option>
+                <option value="6">Leathery</option>
+                <option value="5">Silky</option>
+                <option value="8">Sticky</option>
+                <option value="9">Wrinkled</option>
+                <option value="1">Fleshy</option>
+                <option value="0">Others</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="capColor">Cap Color:</label>
+            <select id="capColor" name="capColor" required>
+                <option value="5">Brown</option>
+                <option value="0">Buff</option>
+                <option value="2">Gray</option>
+                <option value="8">Green</option>
+                <option value="7">Pink</option>
+                <option value="9">Purple</option>
+                <option value="1">Red</option>
+                <option value="10">White</option>
+                <option value="11">Yellow</option>
+                <option value="4">Blue</option>
+                <option value="6">Orange</option>
+                <option value="3">Black</option>
+            </select>
+            </div>
+            
+            <div>
+            <label for="doesBruiseOrBleed">Does bruise bleed?:</label>
+            <select id="doesBruiseOrBleed" name="doesBruiseOrBleed" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            </div>
+            
+
+            <div>
+            <label for="gillAttachment">Gill Attachment:</label>
+            <select id="gillAttachment" name="gillAttachment" required>
+                <option value="0">Adnate</option>
+                <option value="6">Adnexed</option>
+                <option value="1">Decurrent</option>
+                <option value="2">Free</option>>
+                <option value="5">Sinuate</option>>
+                <option value="4">Pores</option>>
+                <option value="3">None</option>>
+            </select>
+            </div>
+
+            <div>
+            <label for="gillColor">Gill Color:</label>
+            <select id="gillColor" name="gillColor" required>
+                <option value="5">Brown</option>
+                <option value="0">Buff</option>
+                <option value="3">Gray</option>
+                <option value="8">Green</option>
+                <option value="7">Pink</option>
+                <option value="9">Purple</option>
+                <option value="1">Red</option>
+                <option value="10">White</option>
+                <option value="11">Yellow</option>
+                <option value="6">Orange</option>
+                <option value="4">Black</option>
+                <option value="2">None</option>
+            </select>
+            </div>
+            
+            <div>
+            <label for="stemHeight">Stem Height (cm):</label>
+            <input type="number" step="0.1" id="stemHeight" name="stemHeight" required>
+            </div>
+
+            <div>
+            <label for="stemWidth">Stem Width (cm):</label>
+            <input type="number" step="0.1" id="stemWidth" name="stemWidth" required>
+            </div>
+
+            <div>
+            <label for="stemColor">Stem Color:</label>
+            <select id="stemColor" name="stemColor" required>
+                <option value="6">Brown</option>
+                <option value="0">Buff</option>
+                <option value="3">Gray</option>
+                <option value="9">Green</option>
+                <option value="8">Pink</option>
+                <option value="10">Purple</option>
+                <option value="1">Red</option>
+                <option value="11">White</option>
+                <option value="12">Yellow</option>
+                <option value="7">Orange</option>
+                <option value="4">Black</option>
+                <option value="5">Blue</option>
+                <option value="2">None</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="hasRing">Has Ring?:</label>
+            <select id="hasRing" name="hasRing" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="ringType">Ring Type:</label>
+            <select id="ringType" name="ringType" required>
+                <option value="0">Evanescent</option>
+                <option value="6">Flaring</option>
+                <option value="2">Grooved</option>
+                <option value="3">Large</option>
+                <option value="5">Pendant</option>
+                <option value="7">Zone</option>
+                <option value="4">Movable</option>
+                <option value="1">None</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="habitat">Habitat:</label>
+            <select id="habitat" name="habitat" required>
+                <option value="1">Grasses</option>
+                <option value="3">Leaves</option>
+                <option value="4">Meadows</option>
+                <option value="5">Paths</option>
+                <option value="2">Heaths</option>
+                <option value="6">Urban</option>
+                <option value="7">Waste</option>
+                <option value="0">Woods</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="season">Season:</label>
+            <select id="season" name="season" required>
+                <option value="1">Spring</option>
+                <option value="2">Summer</option>
+                <option value="0">Autumn</option>
+                <option value="3">Winter</option>
+            </select>
+            </div>
+
+            <p>
+            <button type="button" onclick="classifyMushroom()">Classify</button>
+            </p>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

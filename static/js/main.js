@@ -15,7 +15,7 @@ function classifyMushroom() {
     var habitat = document.getElementById('habitat').value;
     var season = document.getElementById('season').value;
 
-    // Send the data to the server for classification
+    // Sending the data to the server for classification
     fetch('/classify', {
         method: 'POST',
         headers: {

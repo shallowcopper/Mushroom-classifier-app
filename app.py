@@ -12,7 +12,7 @@ def index():
 def classify():
     data = request.get_json()
 
-    # Extract features from the JSON payload
+    # Extracting features from the JSON
     capDiameter = int(data['capDiameter'])
     capShape = int(data['capShape'])
     capSurface = int(data['capSurface'])
@@ -28,7 +28,7 @@ def classify():
     habitat = int(data['habitat'])
     season = int(data['season'])
 
-    # Call your machine learning model for classification
+    # Calling machine learning model
     result = classify_mushroom(capDiameter, capShape, capSurface, capColor,
                                 doesBruiseOrBleed, gillAttachment, gillColor,
                                 stemHeight, stemWidth, stemColor,

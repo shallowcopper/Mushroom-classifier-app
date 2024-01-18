@@ -18,6 +18,12 @@ file_path = Path("C:/Users/prane/OneDrive/Desktop/DS Project/Group10/Group10/Gro
 # Read the clean dataset
 df = pd.read_csv(file_path, delimiter=';')
 
+# Display the first few tuples of the dataset
+df.head()
+
+# Display the column information
+df.info()
+
 # Check for the duplicate tuples, if any
 duplicate_rows = df.duplicated()
 # Count of duplicate rows
